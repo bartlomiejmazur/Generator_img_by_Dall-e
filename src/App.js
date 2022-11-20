@@ -48,9 +48,10 @@ function App() {
       {result.length > 0 ? <img className='app-result__image' src={result} alt="result" /> :<>
       
       <RingLoader
+      className='loader'
         color={'#0f0'}
         loading={loading}
-        size={150}
+        size={50}
       />
      
       </>}
