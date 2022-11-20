@@ -6,14 +6,14 @@ import './App.css';
 
 
 function App() {
+  const [prompt, setPrompt] = useState('')
+  const [result, setResult] = useState('')
 
   const configuration = new Configuration({
     apiKey: process.env.REACT_APP_KEY,
   });
  
   
-  const [prompt, setPrompt] = useState('')
-  const [result, setResult] = useState('')
     const openai = new OpenAIApi(configuration);
     const getImage = async () => {
     const response = await openai.createImage({
