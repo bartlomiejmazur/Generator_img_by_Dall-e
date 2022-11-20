@@ -13,14 +13,15 @@ function App() {
  
   
   const [prompt, setPrompt] = useState('')
+  const [result, setResult] = useState('')
     const openai = new OpenAIApi(configuration);
     const getImage = async () => {
     const response = await openai.createImage({
-     prompt: "Wolf on fire",
+     prompt,
      n: 1,
      size: "1024x1024",
      })
-     console.log(response.data.data[0].url);
+     setResult(response.data.data[0].url);
     };
 
     
@@ -30,8 +31,14 @@ function App() {
   return (
     <div className="app-main">
     <h1>Generate your own image by Artificial intelligence (Dalle-E) </h1>
-    <input className='app-input' type="text" />
+    <input 
+    className='app-input' 
+    type="text" 
+    placeholder='Type something to generate an Image'
+    onChange={(e) => setPrompt(e.target.value)}
+    />
       <button onClick={getImage}>Generate image</button>
+      {result.length > 0 ? <img className='app-result__image' src={result} alt="result" /> : <></>}
     </div>
   );
 }
