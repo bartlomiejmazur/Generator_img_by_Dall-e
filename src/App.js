@@ -37,7 +37,7 @@ function App() {
     placeholder='Type something to generate an Image'
     onChange={(e) => setPrompt(e.target.value)}
     />
-      <button onClick={getImage}>Generate image</button>
+      <button className='app-btn' onClick={getImage}><span>Generate image</span></button>
       {result.length > 0 ? <img className='app-result__image' src={result} alt="result" /> : <></>}
     </div>
   );
