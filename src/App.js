@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+
 import RingLoader from "react-spinners/RingLoader";
+import '../src/canvas'
 
 import { Configuration, OpenAIApi} from 'openai';
 import './App.css';
+
 
 
 
@@ -18,7 +21,11 @@ function App() {
     
     const openai = new OpenAIApi(configuration);
     const getImage = async () => {
-    
+   
+    if(prompt === ""){
+    return alert("You need write something example Dog on the carpet")
+    }
+    else{
     setResult('')
     setLoading(true)
     const response = await openai.createImage({
@@ -29,13 +36,13 @@ function App() {
      setResult(response.data.data[0].url);
      setLoading(false)
     };
-
-    
-     
-    
+  }
+  
 
   return (
+    
     <div className="app-main">
+    
     <h1>Generate your own image by Artificial intelligence (Dalle-E) </h1>
     <input 
     className='app-input' 
@@ -53,9 +60,12 @@ function App() {
         loading={loading}
         size={50}
       />
-     
       </>}
     </div>
+    
+    
+    
+   
   );
 }
 
