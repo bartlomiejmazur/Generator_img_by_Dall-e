@@ -15,7 +15,7 @@ function App() {
   const [loading, setLoading] = useState(false)
 
   const configuration = new Configuration({
-    apiKey: process.env.REACT_APP_KEY,
+    apiKey: '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',
   });
  
     
