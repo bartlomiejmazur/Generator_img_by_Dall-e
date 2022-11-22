@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Dall-e_img_generator/static/css/main.257bf415.css",
-    "main.js": "/Dall-e_img_generator/static/js/main.baeefc82.js",
+    "main.js": "/Dall-e_img_generator/static/js/main.2e18bbe9.js",
     "index.html": "/Dall-e_img_generator/index.html",
     "main.257bf415.css.map": "/Dall-e_img_generator/static/css/main.257bf415.css.map",
-    "main.baeefc82.js.map": "/Dall-e_img_generator/static/js/main.baeefc82.js.map"
+    "main.2e18bbe9.js.map": "/Dall-e_img_generator/static/js/main.2e18bbe9.js.map"
   },
   "entrypoints": [
     "static/css/main.257bf415.css",
-    "static/js/main.baeefc82.js"
+    "static/js/main.2e18bbe9.js"
   ]
 }
